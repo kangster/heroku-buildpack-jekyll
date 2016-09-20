@@ -1,0 +1,17 @@
+#!/bin/sh
+
+BUILD_ROOT=$1
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+message() {
+  echo "-----> $*"
+}
+
+cd $BUILD_ROOT
+
+# Run Jekyll
+message "Compiling Jekyll site..."
+jekyll build --config $BUILD_ROOT/config/jekyll.yml | indent

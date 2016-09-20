@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Check for Jekyll config file
+if [ -f $1/config/jekyll.yml ]; then
+  echo "Jekyll"
+  exit 0
+else
+  exit 1
+fi
