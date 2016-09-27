@@ -14,4 +14,4 @@ cd $BUILD_ROOT
 
 # Run Jekyll
 message "Compiling Jekyll site..."
-jekyll build --config $BUILD_ROOT/config/jekyll.yml | indent
+JEKYLL_ENV=production jekyll build --config $BUILD_ROOT/config/jekyll.yml | indent
