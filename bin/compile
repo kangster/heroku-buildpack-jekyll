@@ -13,5 +13,8 @@ message() {
 cd $BUILD_ROOT
 
 # Run Jekyll
-message "Compiling Jekyll site..."
-JEKYLL_ENV=production jekyll build --config $BUILD_ROOT/config/jekyll.yml | indent
+message "Compiling Jekyll Blog site..."
+JEKYLL_ENV=production bundle exec jekyll build --config $BUILD_ROOT/config/jekyll/blog.yml | indent
+
+message "Compiling Jekyll Changelog site..."
+JEKYLL_ENV=production bundle exec jekyll build --config $BUILD_ROOT/config/jekyll/changelog.yml | indent
