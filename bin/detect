@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Check for Jekyll config file
-if [ -f $1/config/jekyll.yml ]; then
+if [ -f $1/config/jekyll/blog.yml ] && [ -f $1/config/jekyll/changelog.yml ]; then
   echo "Jekyll"
   exit 0
 else
